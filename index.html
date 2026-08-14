@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-th="แนวทางการท่องเที่ยวแคนาดา" data-en="Canada Travel Guide">แนวทางการท่องเที่ยวแคนาดา</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --canada-red: #d90429;
+            --dark-red: #a50b1e;
+            --white: #ffffff;
+            --bg-light: #f6f6f6;
+            --text-dark: #1f1f1f;
+            --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans Thai", "Arial", sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-light);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--canada-red);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--canada-red);
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 2rem;
+            border-left: 2px solid #e0e0e0;
+            padding-left: 2rem;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            background: var(--bg-light);
+            border: 2px solid transparent;
+            color: var(--text-dark);
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .lang-btn.active {
+            background: var(--canada-red);
+            color: var(--white);
+            border-color: var(--canada-red);
+        }
+
+        .lang-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .lang-btn.active:hover {
+            background: var(--dark-red);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23d90429;stop-opacity:1" /><stop offset="100%" style="stop-color:%23a50b1e;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23grad)" width="1200" height="600"/><circle cx="100" cy="100" r="200" fill="rgba(255,255,255,0.1)"/><circle cx="1100" cy="500" r="300" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--canada-red);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--canada-red);
+            cursor: pointer;
+            font-size: 16px;
+            font-family: "Noto Sans Thai", "Arial", sans-serif;
+        }
+
+        .btn:hover {
+            background: var(--dark-red);
+            border-color: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--canada-red);
+        }
+
+        /* ===== HERO GALLERY ===== */
+        .hero-gallery {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ===== ATTRACTIONS SECTION ===== */
+        .attractions {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--canada-red);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: #e8f0ff;
+            color: var(--canada-red);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .card-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== FOOD & CULTURE SECTION ===== */
+        .food-culture {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .culture-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+            padding: 40px;
+            background: var(--bg-light);
+            border-radius: 16px;
+        }
+
+        .culture-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+
+        .culture-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .culture-content h3 {
+            font-size: 1.8rem;
+            color: var(--canada-red);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .culture-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .festivals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .festival-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+
+        .festival-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .festival-image {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .festival-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .festival-card:hover .festival-image img {
+            transform: scale(1.05);
+        }
+
+        .festival-content {
+            padding: 16px;
+        }
+
+        .festival-content h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .festival-content p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .about-container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .profile-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 2rem;
+            border: 4px solid var(--canada-red);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-name {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== TEACHER LINK ===== */
+        .teacher-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--canada-red);
+            color: var(--white) !important;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(217, 4, 41, 0.2);
+        }
+
+        .teacher-link:hover {
+            background: var(--dark-red);
+            box-shadow: 0 4px 12px rgba(217, 4, 41, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .teacher-profile-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--canada-red);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .teacher-profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ===== MODAL ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--canada-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-content p {
+            margin: 0.8rem 0;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            color: var(--canada-red);
+        }
+
+        .about-info {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .about-info strong {
+            color: var(--canada-red);
+        }
+
+        /* ===== MUSIC SECTION ===== */
+        .music {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .music-player {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--canada-red) 0%, var(--dark-red) 100%);
+            border-radius: 20px;
+            padding: 40px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .album-cover {
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            margin: 0 auto 2rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .music-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .music-artist {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            height: 40px;
+            accent-color: var(--white);
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        audio::-moz-range-thumb {
+            background: var(--white);
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+            accent-color: var(--white);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+                font-size: 12px;
+            }
+
+            .culture-section {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .attractions-grid,
+            .food-grid,
+            .festivals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-gallery .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .music-player {
+                padding: 20px;
+            }
+
+            .lang-switcher {
+                margin-left: 1rem;
+                padding-left: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-logo {
+                font-size: 18px;
+            }
+
+            .nav-menu {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .card-title {
+                font-size: 1.2rem;
+            }
+
+            .about-name {
+                font-size: 1.5rem;
+            }
+
+            .profile-circle {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container">
+            <div class="nav-logo">
+                🍁 <span data-th="แคนาดา" data-en="Canada">แคนาดา</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-th="หน้าแรก" data-en="Home">หน้าแรก</a></li>
+                <li><a href="#attractions" data-th="สถานที่ท่องเที่ยว" data-en="Attractions">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="#food" data-th="อาหารและวัฒนธรรม" data-en="Food & Culture">อาหารและวัฒนธรรม</a></li>
+                <li><a href="#about" data-th="เกี่ยวกับเรา" data-en="About">เกี่ยวกับเรา</a></li>
+                <li><a href="#music" data-th="เพลง" data-en="Music">เพลง</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('th')">🇹🇭 ไทย</button>
+                <button class="lang-btn" onclick="switchLanguage('en')">🇬🇧 English</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 data-th="ยินดีต้อนรับสู่แคนาดา" data-en="Welcome to Canada">ยินดีต้อนรับสู่แคนาดา</h1>
+            <p data-th="สำรวจความสวยงามของธรรมชาติและวัฒนธรรมอันอุดมสมบูรณ์" data-en="Explore the beauty of nature and rich culture">สำรวจความสวยงามของธรรมชาติและวัฒนธรรมอันอุดมสมบูรณ์</p>
+            <a href="#attractions" class="btn" data-th="สำรวจตอนนี้" data-en="Explore Now">สำรวจตอนนี้</a>
+        </div>
+    </section>
+
+    <!-- HERO GALLERY -->
+    <section class="hero-gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <h3 class="card-title" data-th="โปสการ์ด" data-en="Postcard">โปสการ์ด</h3>
+                    <img src="xx1.jfif" alt="Cake 1">
+                </div>
+                <div class="gallery-item">
+                    <h3 class="card-title" data-th="โปสการ์ด" data-en="Postcard">โปสการ์ด</h3>
+                    <img src="xx2.jfif" alt="Cake 2">
+                </div>
+                <div class="gallery-item">
+                    <h3 class="card-title" data-th="โปสการ์ด" data-en="Postcard">โปสการ์ด</h3>
+                    <img src="xx3.jfif" alt="Cake 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATTRACTIONS SECTION -->
+    <section id="attractions" class="attractions">
+        <div class="container">
+            <h2 class="section-title" data-th="สถานที่ท่องเที่ยว" data-en="Top Attractions">สถานที่ท่องเที่ยว</h2>
+            <div class="attractions-grid">
+                <!-- Niagara Falls -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="a.jpg" alt="Cake">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-th="น้ำตกไนแอการา" data-en="Niagara Falls">น้ำตกไนแอการา</h3>
+                        <span class="card-tag" data-th="ธรรมชาติ" data-en="Nature">ธรรมชาติ</span>
+                        <p class="card-description" data-th="น้ำตกไนแอการาเป็นหนึ่งในปรากฏการณ์ทางธรรมชาติที่สวยงามที่สุดในโลก ที่ตั้งอยู่ระหว่างแคนาดาและสหรัฐอเมริกา ประจำด้วยมหากำลังน้ำที่งดงามและวิวที่น่าตื่นตาตื่นใจตลอดปี เป็นจุดหมายปลายทางที่ได้รับความนิยมสูงสุดของนักท่องเที่ยว" data-en="Niagara Falls is one of the most spectacular natural wonders in the world, straddling the border between Canada and the United States. Famous for its powerful cascading waters and breathtaking views, it attracts millions of visitors annually and is a must-see destination for nature lovers.">น้ำตกไนแอการาเป็นหนึ่งในปรากฏการณ์ทางธรรมชาติที่สวยงามที่สุดในโลก ที่ตั้งอยู่ระหว่างแคนาดาและสหรัฐอเมริกา ประจำด้วยมหากำลังน้ำที่งดงามและวิวที่น่าตื่นตาตื่นใจตลอดปี เป็นจุดหมายปลายทางที่ได้รับความนิยมสูงสุด</p>
+                    </div>
+                </div>
+
+                <!-- Banff National Park -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="s.jpg" alt="Cake">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-th="อุทยานแห่งชาติแบนฟ์" data-en="Banff National Park">อุทยานแห่งชาติแบนฟ์</h3>
+                        <span class="card-tag" data-th="ธรรมชาติ" data-en="Nature">ธรรมชาติ</span>
+                        <p class="card-description" data-th="แบนฟ์ เป็นอุทยานแห่งชาติที่เก่าแก่ที่สุดของแคนาดา และอยู่ในทะเบียนโลกถ้ำปัญญาของยูเนสโก สถานที่นี้เต็มไปด้วยภูเขาที่สูงชัน ทะเลสาบสีเขียวมรกต และหาดทรายสวย ที่นี่เป็นสวรรค์สำหรับการปีนเขา การเดินป่า และการถ่ายภาพ" data-en="Banff is Canada's oldest national park and a UNESCO World Heritage Site. It's renowned for its towering mountains, turquoise lakes, and pristine wilderness. Perfect for hiking, mountaineering, and photography, Banff offers some of the most stunning alpine scenery in North America.">แบนฟ์ เป็นอุทยานแห่งชาติที่เก่าแก่ที่สุดของแคนาดา ที่ตั้งอยู่ในหุบเขาและปกคลุมด้วยภูเขาสูง ทะเลสาบสีเขียวมรกต และป่าอันสวยงาม เป็นสวรรค์สำหรับการปีนเขาและการถ่ายภาพ</p>
+                    </div>
+                </div>
+
+                <!-- Quebec Old Town -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="d.jpg" alt="Cake">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-th="เมืองเก่าควิเบก" data-en="Quebec Old Town">เมืองเก่าควิเบก</h3>
+                        <span class="card-tag" data-th="ประวัติศาสตร์" data-en="History">ประวัติศาสตร์</span>
+                        <p class="card-description" data-th="เมืองเก่าควิเบก เป็นสถานที่ท่องเที่ยวที่มีเสน่ห์แนวยุโรปอยู่ในแคนาดา ด้วยสถาปัตยกรรมคลาสสิก ทางเดินแคบ และบรรยากาศเก่าแก่ สถานที่นี้ได้รับการยอมรับจากยูเนสโก เป็นมรดกของอารยธรรมชั้นดี" data-en="Old Quebec is a charming European-style historic district in Canada, featuring classic architecture, cobblestone streets, and a pristine old-world atmosphere. Recognized as a UNESCO World Heritage Site, it's the perfect destination for history enthusiasts and cultural explorers.">เมืองเก่าควิเบก เป็นศูนย์กลางประวัติศาสตร์ที่สำคัญของแคนาดา ด้วยสถาปัตยกรรมแบบยุโรป ทางเดินแคบยาว และบรรยากาศเก่าแก่ที่ทำให้จู่ใจ ได้รับการยอมรับจากยูเนสโก</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOD & CULTURE SECTION -->
+    <section id="food" class="food-culture">
+        <div class="container">
+            <!-- Food Subsection -->
+            <h2 class="section-title" data-th="อาหารแคนาดา" data-en="Canadian Cuisine">อาหารแคนาดา</h2>
+            <div class="food-grid">
+                <!-- Poutine -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="c.jpg" alt="Cake">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-th="พูตีน" data-en="Poutine">พูตีน</h3>
+                        <p class="card-description" data-th="พูตีน เป็นจานอาหารคลาสสิคของแคนาดา ประกอบด้วยมันฝรั่งทอด ซาลบี้ (หรือน้ำแกงเนื้อ) และชีสเคิร์ด ทำให้เกิดรสชาติที่อร่อยและติดใจ เป็นอาหารยอดนิยมที่ห้ามพลาดเมื่อมาแคนาดา" data-en="Poutine is Canada's iconic dish, featuring crispy French fries topped with rich gravy and cheese curds. This delicious comfort food is a must-try when visiting Canada and is beloved by locals and tourists alike.">พูตีน เป็นจานอาหารที่สุดยอดของแคนาดา ประกอบด้วยมันฝรั่งทอด น้ำซุปเนื้อ และชีสเคิร์ด ที่มีรสชาติอร่อยมากและติดใจ เป็นอาหารคลาสสิคที่ห้ามพลาด</p>
+                    </div>
+                </div>
+
+                <!-- Smoked Meat -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="c1.webp" alt="Cake">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-th="เนื้อรมควัน" data-en="Smoked Meat">เนื้อรมควัน</h3>
+                        <p class="card-description" data-th="เนื้อรมควัน โดยเฉพาะเนื้อรมควันมอนทรีออล ได้รับการยอมรับว่าเป็นหนึ่งในอาหารที่ดีที่สุดในแคนาดา เนื้อจะถูกรมควันด้วยเทคนิคพิเศษ เสิร์ฟพร้อมขนมปังไรย์ และนิยมแทนทำให้เป็นแซนวิช" data-en="Montreal Smoked Meat is a beloved Canadian delicacy, featuring beef brisket cured and smoked with traditional spices. Typically served on rye bread with mustard, it's a flavorful and hearty dish that's perfect for meat lovers.">เนื้อรมควัน โดยเฉพาะจากมอนทรีออล เป็นอาหารคลาสสิคที่สดใหม่และมีรสชาติเข้มข้น ประกอบด้วยเนื้อวัวที่รมควัน เสิร์ฟพร้อมขนมปังไรย์และมัสตาร์ด</p>
+                    </div>
+                </div>
+
+                <!-- BeaverTails -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="c2.jpg" alt="Cake">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-th="เบเวอร์เทลส์" data-en="BeaverTails">เบเวอร์เทลส์</h3>
+                        <p class="card-description" data-th="เบเวอร์เทลส์ เป็นขนมหวานแคนาดีย์ที่มีลักษณะอันโดดเด่น ทำจากแป้งทอดกรอบแล้วเคลือบด้วยน้ำตาล อาจมีหน้าท็อปพิ่งที่หลากหลาย เช่น แนวทิ้มเมล หรือช็อกโกแลต ขนมนี้ได้รับความนิยมสูงเพราะรสชาติหวาน กรอบ และเก้อกำลังเหมาะสำหรับของว่าง" data-en="BeaverTails are iconic Canadian pastries shaped like beaver tails. Fried and topped with cinnamon sugar or chocolate spread, these delicious treats are crispy, sweet, and utterly addictive. They're a perfect snack when exploring Canada.">เบเวอร์เทลส์ เป็นขนมหวานที่มีลักษณะเป็นรูปหางบีเวอร์ ทำจากแป้งทอดกรอบ และเคลือบด้วยน้ำตาลอบเชย หรือช็อกโกแลต รสชาติหวาน กรอบ และเก้อ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Culture Subsection -->
+            <h2 class="section-title" data-th="วัฒนธรรมแคนาดา" data-en="Canadian Culture">วัฒนธรรมแคนาดา</h2>
+            
+            <div class="culture-section">
+                <div class="culture-image">
+                    <img src="1.webp" alt="Cake">
+                </div>
+                <div class="culture-content">
+                    <h3 data-th="วัฒนธรรมและวิถีชีวิต" data-en="Culture and Lifestyle">วัฒนธรรมและวิถีชีวิต</h3>
+                    <p data-th="แคนาดาเป็นประเทศที่มีความหลากหลายทางวัฒนธรรม ประชากรจากหลายประเทศมารวมตัวกันและสร้างสรรค์วัฒนธรรมที่มีลักษณะเฉพาะตัว" data-en="Canada is a multicultural nation where people from diverse backgrounds come together to create a unique and inclusive culture. The country celebrates diversity and respects various traditions, religions, and languages, making it a welcoming home for people from around the world.">แคนาดาเป็นประเทศที่มีความหลากหลายทางวัฒนธรรม ประชากรจากหลายประเทศมารวมตัวกัน ทำให้เกิดวัฒนธรรมที่อุดมสมบูรณ์ และมีความสันติสุข</p>
+                    <p data-th="ภาษา: แคนาดามีสองภาษาราชการ ได้แก่ ภาษาอังกฤษและภาษาฝรั่งเศส" data-en="Language: Canada has two official languages - English and French, with French being predominantly spoken in Quebec.">ภาษา: แคนาดามีสองภาษาราชการ ได้แก่ ภาษาอังกฤษและภาษาฝรั่งเศส ซึ่งพูดกันอย่างแพร่หลายในควิเบก</p>
+                    <p data-th="วิถีชีวิต: คนแคนาดาชอบกิจกรรมกลางแจ้ง เช่น ปีนเขา สกี ขี่จักรยาน และการตกปลา โดยเฉพาะในช่วงฤดูกาลเหมาะสม" data-en="Lifestyle: Canadians are known for their love of outdoor activities such as hiking, skiing, cycling, and fishing. Winter sports are particularly popular during the cold season.">วิถีชีวิต: คนแคนาดาชอบกิจกรรมกลางแจ้ง เช่น ปีนเขา เล่นสกี ขี่จักรยาน และการตกปลา</p>
+                </div>
+            </div>
+
+            <!-- Festivals -->
+            <h2 class="section-title" data-th="เทศกาลและงานเลี้ยง" data-en="Festivals & Celebrations">เทศกาลและงานเลี้ยง</h2>
+            <div class="festivals-grid">
+                <div class="festival-card">
+                    <div class="festival-image">
+                        <img src="2.jpg" alt="Cake">
+                    </div>
+                    <div class="festival-content">
+                        <h4 data-th="เทศกาลแจ๊สมอนทรีออล" data-en="Montreal Jazz Festival">เทศกาลแจ๊สมอนทรีออล</h4>
+                        <p data-th="เทศกาลแจ๊สที่ใหญ่ที่สุดในโลก จัดขึ้นในมอนทรีออลทุกปี ด้วยการแสดงเพลงแจ๊สจากศิลปินชื่อดังระดับโลก" data-en="The world's largest jazz festival held annually in Montreal, featuring world-class performances and artists from around the globe.">เทศกาลแจ๊สที่ใหญ่ที่สุดในโลก จัดขึ้นทุกปี ด้วยการแสดงเพลงแจ๊สจากศิลปินชื่อดัง</p>
+                    </div>
+                </div>
+
+                <div class="festival-card">
+                    <div class="festival-image">
+                        <img src="3.jpg" alt="Cake">
+                    </div>
+                    <div class="festival-content">
+                        <h4 data-th="วันแคนาดา" data-en="Canada Day">วันแคนาดา</h4>
+                        <p data-th="วันเกิดของแคนาดา ฉลองในวันที่ 1 กรกฎาคม ด้วยพิธีเปิดตัว ดนตรี และเพลงไพ่ในทั่วประเทศ" data-en="Canada's birthday celebrated on July 1st with fireworks, parades, and festivities throughout the country.">วันเกิดของแคนาดา ฉลองในวันที่ 1 กรกฎาคม ด้วยการเปิดตัว ดนตรี และเพลงไพ่</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-th="เกี่ยวกับผู้สร้าง" data-en="About the Creator">เกี่ยวกับผู้สร้าง</h2>
+            <div class="about-container">
+                <div class="profile-circle">
+                    <img src="me.webp" alt="Cake">
+                </div>
+                <h3 class="about-name" data-th="นาย ธนศักดิ์ โชคเจริญ เลขที่ 6" data-en="Mr. Thanasak chokcharoen no 6">นาย ธนศักดิ์ โชคเจริญ เลขที่ 6</h3>
+                <p class="about-info" data-th="ชั้น: 2/10" data-en="Grade: 2/10">ชั้น: <strong data-th="2/10" data-en="2/10">2/10</strong></p>
+                <p class="about-info" data-th="สาขา: เทคโนโลยีสารสนเทศ" data-en="Field: Information Technology">สาขา: <strong data-th="เทคโนโลยีสารสนเทศ" data-en="Information Technology">เทคโนโลยีสารสนเทศ</strong></p>
+                <p class="about-info" data-th="วิทยาลัย: วิทยาลัยการจัดการเพชรเกษม" data-en="College: Phetkasem Management Technological College">วิทยาลัย: <strong data-th="วิทยาลัยการจัดการเพชรเกษม" data-en="Phetkasem Management Technological College">วิทยาลัยการจัดการเพชรเกษม</strong></p>
+                
+                <hr style="margin: 2rem 0; border: none; border-top: 2px solid var(--canada-red);">
+                <h4 style="color: var(--canada-red); margin-top: 2rem;" data-th="ข้อมูลวิชา" data-en="Subject Information">ข้อมูลวิชา</h4>
+                <p class="about-info" data-th="วิชา: การสร้างเว็บไซต์" data-en="Subject: Website creation">วิชา: <strong data-th="การสร้างเว็บไซต์" data-en="Website creation">การสร้างเว็บไซต์</strong></p>
+                <p class="about-info"><strong class="teacher-link" onclick="openTeacherModal()" data-th="ข้อมูลอาจารย์ผู้สอน" data-en="Teacher Information">ข้อมูลอาจารย์ผู้สอน</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUSIC SECTION -->
+    <section id="music" class="music">
+        <div class="container">
+            <h2 class="section-title" data-th="เพลง" data-en="Music">เพลง</h2>
+            <div class="music-player">
+                <div class="album-cover">
+                    <img src="j.png" alt="Cake">
+                </div>
+                <h3 class="music-title" data-th="Beauty and a Beat" data-en="Beauty and a Beat">Beauty and a Beat</h3>
+                <p class="music-artist" data-th="Justin Bieber ft. Nicki Minaj" data-en="Justin Bieber ft. Nicki Minaj">Justin Bieber ft. Nicki Minaj</p>
+                <iframe style="border-radius:12px; margin-bottom:1.5rem;" src="https://open.spotify.com/embed/track/6QFCMUUq1T2Vf5sFUXcuQ7?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p style="font-size: 0.9rem; opacity: 0.9;" data-th="Beauty and a Beat เป็นเพลงจาก Justin Bieber ร่วมกับ Nicki Minaj ซึ่งเต็มไปด้วยจังหวะที่สนุกสนาน" data-en="Beauty and a Beat is a fun and energetic pop song by Justin Bieber featuring Nicki Minaj">Beauty and a Beat เป็นเพลงสนุกสนาน ร่วมกับ Nicki Minaj</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEACHER MODAL -->
+    <div id="teacherModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeTeacherModal()">&times;</button>
+            <div class="modal-header">
+                <div class="teacher-profile-circle">
+                    <img src="Soontron.png" alt="Teacher Soontron">
+                </div>
+                <h2 class="modal-title" data-th="อาจารย์ สุนทร เอี่ยมเกษมสิน" data-en="Teacher Soontron Eamkamsin">อาจารย์ สุนทร เอี่ยมเกษมสิน</h2>
+            </div>
+            <div class="modal-body">
+                <p data-th="ชื่อ: สุนทร" data-en="Name: Soontron"><strong data-th="ชื่อ: สุนทร" data-en="Name: Soontron">ชื่อ: สุนทร เอี่ยมเกษมสิน</strong></p>
+                <p data-th="ตำแหน่ง: อาจารย์ด้านการสร้างเว็บไซต์" data-en="Position: Web Development Instructor"><strong data-th="ตำแหน่ง: อาจารย์ด้านการสร้างเว็บไซต์" data-en="Position: Web Development Instructor">ตำแหน่ง: อาจารย์ด้านการสร้างเว็บไซต์</strong></p>
+                <p data-th="วิทยาลัย: วิทยาลัยการจัดการเพชรเกษม" data-en="College: Phetkasem Management Technological College"><strong data-th="วิทยาลัย: วิทยาลัยการจัดการเพชรเกษม" data-en="College: Phetkasem Management Technological College">วิทยาลัย: วิทยาลัยการจัดการเพชรเกษม</strong></p>
+                <p data-th="เชี่ยวชาญด้าน: การพัฒนาเว็บไซต์ HTML CSS และ JavaScript" data-en="Expertise: Web Development HTML CSS and JavaScript"><strong data-th="เชี่ยวชาญด้าน: การพัฒนาเว็บไซต์ HTML CSS และ JavaScript" data-en="Expertise: Web Development HTML CSS and JavaScript">เชี่ยวชาญด้าน: การพัฒนาเว็บไซต์ HTML CSS และ JavaScript</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p data-th="© 2024 แนวทางการท่องเที่ยวแคนาดา - ทำด้วยความรัก 🇨🇦" data-en="© 2024 Canada Travel Guide - Made with Love 🇨🇦">© 2026 แนวทางการท่องเที่ยวแคนาดา - ธนศักดิ์ โชคเจริญ 🇨🇦</p>
+    </footer>
+
+    <script>
+        let currentLanguage = 'th';
+
+        // Language Switcher Function
+        function switchLanguage(lang) {
+            currentLanguage = lang; 
+
+            // Update all elements with data-th and data-en attributes
+            document.querySelectorAll('[data-th][data-en]').forEach(element => {
+                const textContent = element.getAttribute(`data-${lang}`);
+                
+                // For title tag
+                if (element.tagName === 'TITLE') {
+                    element.textContent = textContent;
+                } else if (element.childNodes.length === 1 && element.childNodes[0].nodeType === 3) {
+                    // Only text content, no children
+                    element.textContent = textContent;
+                } else {
+                    // Has children or mixed content
+                    const parent = element.parentNode;
+                    const newElement = element.cloneNode(true);
+                    newElement.textContent = textContent;
+                    parent.replaceChild(newElement, element);
+                }
+            });
+
+            // Update language button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Add smooth transition
+            document.body.style.opacity = '0.95';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active menu highlight on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize with Thai language
+        document.querySelector('.lang-btn.active').textContent = '🇹🇭 ไทย';
+
+        // Teacher Modal Functions
+        function openTeacherModal() {
+            document.getElementById('teacherModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTeacherModal() {
+            document.getElementById('teacherModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('teacherModal');
+            if (event.target === modal) {
+                closeTeacherModal();
+            }
+        });
+    </script>
+</body>
+</html>
